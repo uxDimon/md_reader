@@ -18,8 +18,8 @@ export default defineConfig({
 				theme_color: "#222222",
 				background_color: "#222222",
 				display: "standalone",
-				start_url: "/",
-				scope: "/",
+				start_url: "/md_reader/",
+				scope: "/md_reader/",
 
 				icons: [
 					{

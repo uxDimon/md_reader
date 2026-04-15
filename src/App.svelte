@@ -1,5 +1,6 @@
 <script lang="ts">
 	import svelteLogo from "./assets/svelte.svg";
+	import appLogo from "/icons/favicon.svg";
 	import Counter from "./lib/Counter.svelte";
 	import PWABadge from "./lib/PWABadge.svelte";
 </script>
@@ -7,13 +8,13 @@
 <main>
 	<div>
 		<a href="https://vite.dev" target="_blank" rel="noreferrer">
-			<img src="/icons/favicon.svg" class="logo" alt="md_reader Logo" />
+			<img src={appLogo} class="logo" alt="md_reader Logo" />
 		</a>
 		<a href="https://svelte.dev" target="_blank" rel="noreferrer">
 			<img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
 		</a>
 	</div>
-	<h1>md_reader_lol_kek</h1>
+	<h1>md_reader</h1>
 
 	<div class="card">
 		<Counter />
