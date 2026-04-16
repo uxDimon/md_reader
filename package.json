@@ -35,5 +35,8 @@
 	"resolutions": {
 		"sharp": "^0.33.5",
 		"sharp-ico": "^0.1.5"
+	},
+	"dependencies": {
+		"idb": "^8.0.3"
 	}
 }

@@ -1,8 +1,19 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import svelteLogo from "./assets/svelte.svg";
 	import appLogo from "/icons/favicon.svg";
-	import Counter from "./lib/Counter.svelte";
-	import PWABadge from "./lib/PWABadge.svelte";
+	import Counter from "@lib/Counter.svelte";
+	import PWABadge from "@lib/pwa/PWABadge.svelte";
+	import { closeDB } from "@/db/client";
+
+	onMount(() => {
+		function handleBeforeUnload() {
+			closeDB();
+		}
+
+		window.addEventListener("beforeunload", handleBeforeUnload);
+		return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+	});
 </script>
 
 <main>

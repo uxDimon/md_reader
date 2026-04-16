@@ -40,7 +40,7 @@ jobs:
 
       - name: Build PWA (с правильным base для GitHub Pages)
         env:
-          BASE_URL: /md_reader/
+          BASE_URL: /md_reader/ # ← твой путь, подхватывается в vite.config.ts
         run: pnpm run build
 
       - name: Setup Pages
@@ -61,4 +61,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

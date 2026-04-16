@@ -1,6 +1,7 @@
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig, loadEnv } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import path from "node:path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -72,5 +73,11 @@ export default defineConfig(({ mode }) => {
 				},
 			}),
 		],
+		resolve: {
+			alias: {
+				"@lib": path.resolve(__dirname, "./src/lib"),
+				"@": path.resolve(__dirname, "./src"),
+			},
+		},
 	};
 });
